@@ -31,14 +31,14 @@
           nc.nixosModules
         ];
       };
-      devShells = {
-        default = pkgs.mkShell {
-          buildInputs = [ nc.packages.${system}.nixCats ];
-          inputsFrom = [ ];
-          shellHook = ''
-      '';
-        };
-      };
+      # devShells = {
+      #   default = pkgs.mkShell {
+      #     buildInputs = [ nc.packages.${system}.nixCats ];
+      #     inputsFrom = [ ];
+      #     shellHook = ''
+      # '';
+      #   };
+      # };
     };
 }
 
