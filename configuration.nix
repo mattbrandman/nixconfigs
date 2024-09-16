@@ -9,7 +9,7 @@
   # ......
 
   # Enable the Flakes feature and the accompanying new nix command-line tool
-  boot.loader.grub.device = "/dev/v da";   # (for BIOS systems only)
+  boot.loader.grub.device = "/dev/vda";   # (for BIOS systems only)
   boot.loader.systemd-boot.enable = true; # (for UEFI systems only)
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   environment.systemPackages = with pkgs; [
