@@ -27,11 +27,11 @@
 
     #     # Create packages from packageDefinitions
     #     # Define development shells
-    nixosConfigurations.default = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       system = "aarch64-linux";
       modules = [
         ./configuration.nix
-        nc.nixosModules
+        # nc.nixosModules
       ];
     };
       };
