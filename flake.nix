@@ -15,32 +15,32 @@
   };
 
   outputs = { self, nixpkgs, nixCats, flake-utils, ... }@inputs:
-    flake-utils.lib.eachDefaultSystem (system:
-      let
-        pkgs = import nixpkgs { inherit system; };
-        # Import your nixcat-config.nix file
-        nc = import ./nixcats-config.nix { inherit inputs; };
-      in
-      {
-        # Outputs wrapped with ${system} by utils.eachSystem
+    # flake-utils.lib.eachDefaultSystem (system:
+    #   let
+    #     pkgs = import nixpkgs { inherit system; };
+    #     # Import your nixcat-config.nix file
+    #     nc = import ./nixcats-config.nix { inherit inputs; };
+    #   in
+    #   {
+    #     # Outputs wrapped with ${system} by utils.eachSystem
 
-        # Create packages from packageDefinitions
-        # Define development shells
-        nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-          system = "aarch64-linux";
-          modules = [
-            ./configuration.nix
-            nc.nixosModules
-          ];
-        };
-        devShells = {
-          default = pkgs.mkShell {
-            buildInputs = [ nc.packages.${system}.nixCats ];
-            inputsFrom = [ ];
-            shellHook = ''
-        '';
-          };
-        };
-      });
+    #     # Create packages from packageDefinitions
+    #     # Define development shells
+    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+      system = "aarch64-linux";
+      modules = [
+        ./configuration.nix
+        nc.nixosModules
+      ];
+    };
+        # devShells = {
+        #   default = pkgs.mkShell {
+        #     buildInputs = [ nc.packages.${system}.nixCats ];
+        #     inputsFrom = [ ];
+        #     shellHook = ''
+        # '';
+        #   };
+        # };
+      # });
 }
 
