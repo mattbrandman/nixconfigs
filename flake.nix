@@ -15,31 +15,30 @@
   };
 
   outputs = { self, nixpkgs, nixCats, flake-utils, ... }@inputs:
-    flake-utils.lib.eachDefaultSystem (system:
-      let
-        pkgs = import nixpkgs { inherit system; };
-        # Import your nixcat-config.nix file
-        nc = import ./nixcats-config.nix { inherit inputs; };
-      in
-      {
-        # Outputs wrapped with ${system} by utils.eachSystem
+    let
+      pkgs = import nixpkgs { inherit system; };
+      # Import your nixcat-config.nix file
+      nc = import ./nixcats-config.nix { inherit inputs; };
+    in
+    {
+      # Outputs wrapped with ${system} by utils.eachSystem
 
-        # Create packages from packageDefinitions
-        # Define development shells
-        nixosConfigurations.root = nixpkgs.lib.nixosSystem {
-          modules = [
-            ./configuration.nix
-            nc.nixosModules
-          ];
+      # Create packages from packageDefinitions
+      # Define development shells
+      nixosConfigurations.root = nixpkgs.lib.nixosSystem {
+        modules = [
+          ./configuration.nix
+          nc.nixosModules
+        ];
+      };
+      devShells = {
+        default = pkgs.mkShell {
+          buildInputs = [ nc.packages.${system}.nixCats ];
+          inputsFrom = [ ];
+          shellHook = ''
+      '';
         };
-        devShells = {
-          default = pkgs.mkShell {
-            buildInputs = [ nc.packages.${system}.nixCats ];
-            inputsFrom = [ ];
-            shellHook = ''
-        '';
-          };
-        };
-      });
+      };
+    };
 }
 
