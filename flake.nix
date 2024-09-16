@@ -26,7 +26,7 @@
 
         # Create packages from packageDefinitions
         # Define development shells
-        nixosConfigurations.my-nixos = nixpkgs.lib.nixosSystem {
+        nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
           system = system;
           modules = [
             ./configuration.nix
