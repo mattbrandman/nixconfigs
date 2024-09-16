@@ -14,8 +14,8 @@
     # };
   };
 
-  outputs = { self, nixpkgs, nixCats, flake-utils, ... }@inputs: 
-    flake-utils.lib.eachDefaultSystem (system:
+  outputs = { self, nixpkgs, nixCats, flake-utils, system, ... }@inputs: 
+    # flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = import nixpkgs { inherit system; };
         # Import your nixcat-config.nix file
@@ -33,7 +33,7 @@
         nc.nixosModules
       ];
     };
-      });
+      };
         # devShells = {
         #   default = pkgs.mkShell {
         #     buildInputs = [ nc.packages.${system}.nixCats ];
@@ -43,5 +43,6 @@
         #   };
         # };
       # });
+  };
 }
 
