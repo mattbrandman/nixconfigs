@@ -14,14 +14,14 @@
     # };
   };
 
-  outputs = { self, nixpkgs, nixCats, flake-utils, ... }@inputs: {
+  outputs = { self, nixpkgs, nixCats, flake-utils, ... }@inputs: 
     # flake-utils.lib.eachDefaultSystem (system:
-    #   let
-    #     pkgs = import nixpkgs { inherit system; };
-    #     # Import your nixcat-config.nix file
-    #     nc = import ./nixcats-config.nix { inherit inputs; };
-    #   in
-    #   {
+      let
+        pkgs = import nixpkgs { inherit system; };
+        # Import your nixcat-config.nix file
+        nc = import ./nixcats-config.nix { inherit inputs; };
+      in
+      {
     #     # Outputs wrapped with ${system} by utils.eachSystem
 
     #     # Create packages from packageDefinitions
@@ -33,6 +33,7 @@
         nc.nixosModules
       ];
     };
+      };
         # devShells = {
         #   default = pkgs.mkShell {
         #     buildInputs = [ nc.packages.${system}.nixCats ];
@@ -42,6 +43,5 @@
         #   };
         # };
       # });
-  };
 }
 
