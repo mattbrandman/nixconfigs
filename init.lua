@@ -1030,7 +1030,8 @@ require('nixCatsUtils').setup {
     require 'plugins.kickstart-default.indent_line',
     require 'plugins.kickstart-default.lint',
     { import = 'plugins.custom' },
+    
   }, lazyOptions)
-  
+require 'mattbrandman'
   -- The line beneath this is called `modeline`. See `:help modeline`
   -- vim: ts=2 sts=2 sw=2 et
