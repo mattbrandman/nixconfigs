@@ -3,7 +3,7 @@
 {
   imports = [
     # Include the results of the hardware scan.
-    ./hc.nix
+    ./hardware_configuration.nix
   ];
 
   # ......
