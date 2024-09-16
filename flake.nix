@@ -30,7 +30,7 @@
       system = "aarch64-linux";
       modules = [
         ./configuration.nix
-        nc.nixosModules
+        # nc.nixosModules
       ];
     };
         # devShells = {
