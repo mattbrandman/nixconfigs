@@ -16,7 +16,7 @@
 
   outputs = { self, nixpkgs, nixCats, flake-utils, ... }@inputs:
     let
-      pkgs = import nixpkgs { inherit system; };
+      # pkgs = import nixpkgs { inherit system; };
       # Import your nixcat-config.nix file
       nc = import ./nixcats-config.nix { inherit inputs; };
     in
