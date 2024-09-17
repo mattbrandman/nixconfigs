@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs... }:
 
 {
   imports = [
@@ -6,7 +6,21 @@
     ./hardware-configuration.nix
   ];
 
-  # ......
+  # Cache Settings
+  # configuration.nix
+
+  nix.settings = {
+    substituters = ["https://hyprland.cachix.org"];
+    trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
+  };
+  
+  programs.hyprland = {
+    enable = true;
+    # set the flake package
+    package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+    # make sure to also set the portal package, so that they are in sync
+    portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
+  };
 
   # Enable the Flakes feature and the accompanying new nix command-line tool
   boot.loader.grub.device = "/dev/vda";   # (for BIOS systems only)
@@ -21,7 +35,8 @@
     curl
   ];
   # Set the default editor to vim
-  environment.variables.EDITOR = "vim";
+  nixCats.enable = true;
+  environment.variables.EDITOR = "nvim";
 
   # ......
 }

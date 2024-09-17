@@ -5,8 +5,7 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     nixCats.url = "github:BirdeeHub/nixCats-nvim?dir=nix";
-    flake-utils.url = "github:numtide/flake-utils";
-
+    inputs.hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
     # Include any additional inputs if needed
     # For example:
     # neovim-nightly-overlay = {
@@ -28,18 +27,12 @@
       # Define development shells
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
         inherit system;
+        specialArgs = { inherit inputs; };
+
         modules = [
           ./configuration.nix
-          nc.nixosModules
+          nc.nixosModules.default
         ];
-      };
-      devShells = {
-        default = pkgs.mkShell {
-          buildInputs = [ nc.packages.${system}.nixCats ];
-          inputsFrom = [ ];
-          shellHook = ''
-          '';
-        };
       };
     };
 }
