@@ -38,6 +38,7 @@
     vim
     wget
     curl
+    kitty
   ];
   # Set the default editor to vim
   nixCats.enable = true;
