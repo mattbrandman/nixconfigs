@@ -5,7 +5,7 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     nixCats.url = "github:BirdeeHub/nixCats-nvim?dir=nix";
-    inputs.hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
+    hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
     # Include any additional inputs if needed
     # For example:
     # neovim-nightly-overlay = {
@@ -28,7 +28,6 @@
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
         inherit system;
         specialArgs = { inherit inputs; };
-
         modules = [
           ./configuration.nix
           nc.nixosModules.default
