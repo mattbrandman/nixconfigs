@@ -15,7 +15,6 @@
   };
 
   outputs = { self, nixpkgs, nixCats, flake-utils, ... }@inputs:
-  flake-utils.lib.eachDefaultSystem (system:
     let
       pkgs = import nixpkgs { inherit system; };
       # Import your nixcat-config.nix file
@@ -40,6 +39,6 @@
           '';
         };
       };
-    });
+    };
 }
 
