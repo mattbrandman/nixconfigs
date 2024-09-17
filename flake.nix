@@ -15,7 +15,7 @@
 
   outputs = { self, nixpkgs, nixCats, flake-utils, ... }@inputs:
     let
-      system = "aarch64-darwin";
+      system = "aarch64-linux";
       pkgs = import nixpkgs { inherit system; };
       # Import your nixcat-config.nix file
       nc = import ./nixcats-config.nix {inherit inputs;};
