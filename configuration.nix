@@ -18,6 +18,15 @@
     WLR_NO_HARDWARE_CURSORS = "1";
     WLR_RENDERER_ALLOW_SOFTWARE= "1";
   };
+  services.xserver.displayManager = {
+      sddm = {
+        enable = true;
+        enableHidpi = true;
+        settings = {
+          General.DisplayServer = "wayland";
+        };
+      };
+  }
   services.spice-vdagentd.enable = true;
   services.qemuGuest.enable = true;
   # services.xserver.enable = true;
