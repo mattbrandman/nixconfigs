@@ -14,11 +14,6 @@
     substituters = ["https://hyprland.cachix.org"];
     trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
   };
-  virtualisation.qemu.options = [
-      "-device virtio-vga-gl"
-      "-display sdl,gl=on,show-cursor=off"
-      "-audio pa,model=hda"
-    ];
   environment.sessionVariables = {
     WLR_NO_HARDWARE_CURSORS = "1";
     WLR_RENDERER_ALLOW_SOFTWARE= "1";
