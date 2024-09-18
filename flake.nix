@@ -6,7 +6,6 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     nixCats.url = "github:BirdeeHub/nixCats-nvim?dir=nix";
     hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
-    chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     # Include any additional inputs if needed
     # For example:
     # neovim-nightly-overlay = {
@@ -14,7 +13,7 @@
     # };
   };
 
-  outputs = { self, chaotic, nixpkgs, nixCats, flake-utils, ... }@inputs:
+  outputs = { self, nixpkgs, nixCats, flake-utils, ... }@inputs:
     let
       system = "aarch64-linux";
       pkgs = import nixpkgs { inherit system; };
@@ -32,7 +31,6 @@
         modules = [
           ./configuration.nix
           nc.nixosModules.default
-          chaotic.nixosModules.default
         ];
       };
     };

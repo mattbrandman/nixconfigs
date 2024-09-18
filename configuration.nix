@@ -20,7 +20,6 @@
   };
   services.spice-vdagentd.enable = true;
   services.qemuGuest.enable = true;
-  chaotic.mesa-git.enable = true;
   # services.xserver.enable = true;
   programs.hyprland = {
     enable = true;
