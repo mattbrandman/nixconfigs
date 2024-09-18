@@ -40,6 +40,7 @@
     curl
     qt6.qtwayland
     tmux
+    kitty
   ];
   # Set the default editor to vim
   nixCats.enable = true;
