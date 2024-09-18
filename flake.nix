@@ -14,7 +14,7 @@
     # };
   };
 
-  outputs = { self, nixpkgs, nixCats, flake-utils, ... }@inputs:
+  outputs = { self, chaotic, nixpkgs, nixCats, flake-utils, ... }@inputs:
     let
       system = "aarch64-linux";
       pkgs = import nixpkgs { inherit system; };
