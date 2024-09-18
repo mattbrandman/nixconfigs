@@ -42,7 +42,7 @@
     tmux
     kitty
     mesa
-    mesa.utils
+    mesa-utils
   ];
   # Set the default editor to vim
   nixCats.enable = true;
