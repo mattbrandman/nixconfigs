@@ -42,7 +42,7 @@
   ];
   # Set the default editor to vim
   nixCats.enable = true;
-  hardware.opengl.enable = true;
+  hardware.graphics.enable = true;
   environment.variables.EDITOR = "nvim";
 
   # ......
