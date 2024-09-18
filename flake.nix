@@ -6,6 +6,7 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     nixCats.url = "github:BirdeeHub/nixCats-nvim?dir=nix";
     hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
+    chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     # Include any additional inputs if needed
     # For example:
     # neovim-nightly-overlay = {
@@ -31,6 +32,7 @@
         modules = [
           ./configuration.nix
           nc.nixosModules.default
+          chaotic.nixosModules.default
         ];
       };
     };
