@@ -20,6 +20,7 @@
   };
   services.xserver.displayManager = {
       sddm = {
+        wayland.enable = true;
         enable = true;
         enableHidpi = true;
         settings = {
