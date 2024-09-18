@@ -18,6 +18,8 @@
     WLR_NO_HARDWARE_CURSORS = "1";
     WLR_RENDERER_ALLOW_SOFTWARE= "1";
   };
+  services.spice-vdagentd.enable = true;
+  services.qemuGuest.enable = true;
   # services.xserver.enable = true;
   programs.hyprland = {
     enable = true;
@@ -42,6 +44,7 @@
     tmux
     kitty
     mesa
+    spice-vdagent
   ];
   # Set the default editor to vim
   nixCats.enable = true;
