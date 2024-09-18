@@ -40,7 +40,7 @@
     wget
     curl
     kitty
-    qt6-wayland
+    qt6.qtwayland
   ];
   # Set the default editor to vim
   nixCats.enable = true;
