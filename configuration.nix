@@ -18,7 +18,7 @@
     WLR_NO_HARDWARE_CURSORS = "1";
     WLR_RENDERER_ALLOW_SOFTWARE= "1";
   };
-
+  services.xserver.enable = true;
   programs.hyprland = {
     enable = true;
     # set the flake package
