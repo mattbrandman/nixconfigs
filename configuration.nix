@@ -41,6 +41,8 @@
     qt6.qtwayland
     tmux
     kitty
+    mesa
+    mesa.utils
   ];
   # Set the default editor to vim
   nixCats.enable = true;
