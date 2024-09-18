@@ -26,7 +26,7 @@
           General.DisplayServer = "wayland";
         };
       };
-  }
+  };
   services.spice-vdagentd.enable = true;
   services.qemuGuest.enable = true;
   # services.xserver.enable = true;
