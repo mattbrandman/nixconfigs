@@ -21,13 +21,7 @@
   services.spice-vdagentd.enable = true;
   services.qemuGuest.enable = true;
   # services.xserver.enable = true;
-  programs.hyprland = {
-    enable = true;
-    # set the flake package
-    package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
-    # make sure to also set the portal package, so that they are in sync
-    portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
-  };
+  programs.hyprland.enable = true
 
   # Enable the Flakes feature and the accompanying new nix command-line tool
   boot.loader.grub.device = "/dev/vda";   # (for BIOS systems only)
