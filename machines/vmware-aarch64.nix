@@ -7,6 +7,8 @@
   ];
   services.displayManager.sddm.enable = true; #This line enables sddm
   services.displayManager.sddm.wayland.enable = true;
+  services.xserver.displayManager.sddm.theme = "where_is_my_sddm_theme";
+
   # services.xserver.displayManager.sddm.enable = true; #This line enables sddm
   services.xserver.enable = true; # Might need this for Xwayland  
   # Enable the Flakes feature and the accompanying new nix command-line tool
@@ -26,6 +28,7 @@
     tmux
     alacritty
     kitty
+    where_is_my_sddm_theme
   ];
 
   users.users.alice = {
