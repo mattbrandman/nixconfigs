@@ -15,7 +15,6 @@
 
   outputs = { self, nixpkgs, nixCats, ... }@inputs:
     let
-      system = "aarch64-linux";
       pkgs = import nixpkgs { inherit system; };
       # Import your nixcat-config.nix file
       nc = import ./nixcats-config.nix {inherit inputs;};
@@ -26,10 +25,18 @@
       # Create packages from packageDefinitions
       # Define development shells
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-        inherit system;
+        system = "aarch64-linux";
         specialArgs = { inherit inputs; };
         modules = [
-          ./configuration.nix
+          ./machines/vmware-aarch64.nix
+          nc.nixosModules.default
+        ];
+      };
+      nixosConfigurations.vm-aarch64 = nixpkgs.lib.nixosSystem {
+        system = "aarch64-linux";
+        specialArgs = { inherit inputs; };
+        modules = [
+          ./machines/vmware-aarch64.nix
           nc.nixosModules.default
         ];
       };
