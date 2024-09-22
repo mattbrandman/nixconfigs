@@ -15,7 +15,7 @@
     WLR_RENDERER_ALLOW_SOFTWARE= "1";
   };
   services.spice-vdagentd.enable = true;
-  services.qemuGuest.enable = true;
+  # services.qemuGuest.enable = true;
   # services.xserver.enable = true;
 
   # Enable the Flakes feature and the accompanying new nix command-line tool
@@ -32,7 +32,7 @@
     curl
     qt6.qtwayland
     tmux
-    kitty
+    alacritty
   ];
   # Set the default editor to vim
   # nixCats.enable = true;

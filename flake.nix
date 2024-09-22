@@ -30,7 +30,7 @@
         specialArgs = { inherit inputs; };
         modules = [
           ./configuration.nix
-          # nc.nixosModules.default
+          nc.nixosModules.default
         ];
       };
     };
