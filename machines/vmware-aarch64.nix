@@ -28,7 +28,7 @@
     tmux
     alacritty
     kitty
-    where_is_my_sddm_theme
+    where-is-my-sddm-theme
   ];
 
   users.users.alice = {
