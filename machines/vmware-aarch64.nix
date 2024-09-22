@@ -5,7 +5,7 @@
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
   ];
-
+  services.xserver.displayManager.sddm.enable = true; #This line enables sddm
   # Enable the Flakes feature and the accompanying new nix command-line tool
   boot.loader.grub.device = "/dev/sda";   # (for BIOS systems only)
   boot.loader.systemd-boot.enable = true; # (for UEFI systems only)
@@ -23,7 +23,7 @@
     alacritty
     kitty
   ];
-  
+
   # Set the default editor to vim
   nixCats.enable = true;
   environment.variables.EDITOR = "nvim";
@@ -34,6 +34,7 @@
     WLR_NO_HARDWARE_CURSORS = "1";
     WLR_RENDERER_ALLOW_SOFTWARE= "1";
   };
+
 
   # ......
 }
