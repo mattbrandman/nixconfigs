@@ -8,7 +8,7 @@
 
   # Cache Settings
   # configuration.nix
-  virtualisation.vmware.guest.enable = true
+  virtualisation.vmware.guest.enable = true;
   # this needs to be active before hyprland TODO: make this automated somehow? https://discourse.nixos.org/t/how-to-set-up-cachix-in-flake-based-nixos-config/31781/3
   environment.sessionVariables = {
     WLR_NO_HARDWARE_CURSORS = "1";
