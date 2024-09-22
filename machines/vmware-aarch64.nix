@@ -27,6 +27,13 @@
     kitty
   ];
 
+  users.users.alice = {
+    isNormalUser  = true;
+    home  = "/home/alice";
+    description  = "Alice Foobar";
+    password = "dummy";
+  };
+
   # Set the default editor to vim
   nixCats.enable = true;
   environment.variables.EDITOR = "nvim";
