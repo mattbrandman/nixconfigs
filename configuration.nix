@@ -17,7 +17,6 @@
   services.spice-vdagentd.enable = true;
   services.qemuGuest.enable = true;
   # services.xserver.enable = true;
-  programs.hyprland.enable = true
 
   # Enable the Flakes feature and the accompanying new nix command-line tool
   boot.loader.grub.device = "/dev/vda";   # (for BIOS systems only)
