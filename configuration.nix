@@ -33,6 +33,7 @@
     qt6.qtwayland
     tmux
     alacritty
+    kitty
   ];
   # Set the default editor to vim
   # nixCats.enable = true;
