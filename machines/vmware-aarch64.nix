@@ -21,7 +21,7 @@
     vim
     wget
     curl
-    qt5.wayland
+    qt5.qtwayland
     qt6.qtwayland
     tmux
     alacritty
