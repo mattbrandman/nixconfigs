@@ -36,6 +36,7 @@
     home  = "/home/alice";
     description  = "Alice Foobar";
     password = "dummy";
+    extraGroups = [ "wheel" ];
   };
 
   # Set the default editor to vim
