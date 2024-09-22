@@ -14,7 +14,7 @@
     WLR_NO_HARDWARE_CURSORS = "1";
     WLR_RENDERER_ALLOW_SOFTWARE= "1";
   };
-  services.spice-vdagentd.enable = true;
+  # services.spice-vdagentd.enable = true;
   # services.qemuGuest.enable = true;
   # services.xserver.enable = true;
 
@@ -36,7 +36,6 @@
   ];
   # Set the default editor to vim
   # nixCats.enable = true;
-  hardware.graphics.enable = true;
   environment.variables.EDITOR = "nvim";
 
   # ......
