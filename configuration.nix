@@ -36,7 +36,7 @@
     kitty
   ];
   # Set the default editor to vim
-  # nixCats.enable = true;
+  nixCats.enable = true;
   environment.variables.EDITOR = "nvim";
 
   # ......
