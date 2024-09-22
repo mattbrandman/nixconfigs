@@ -13,7 +13,7 @@
     # };
   };
 
-  outputs = { self, nixpkgs, nixCats, flake-utils, ... }@inputs:
+  outputs = { self, nixpkgs, nixCats, ... }@inputs:
     let
       system = "aarch64-linux";
       pkgs = import nixpkgs { inherit system; };
@@ -30,7 +30,7 @@
         specialArgs = { inherit inputs; };
         modules = [
           ./configuration.nix
-          nc.nixosModules.default
+          # nc.nixosModules.default
         ];
       };
     };
