@@ -30,7 +30,7 @@
     alacritty
     kitty
     konsole
-
+    mako
   ];
 
   users.users.matt = {
