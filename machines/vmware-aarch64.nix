@@ -28,7 +28,7 @@
     kitty
     where-is-my-sddm-theme
   ];
-  service.xserver.videoDrivers = [ "vmware" ];
+  services.xserver.videoDrivers = [ "vmware" ];
 
   qt.enable = true;
 
