@@ -6,9 +6,11 @@
     ./hardware-configuration.nix
   ];
   hardware.graphics.enable = true;
+  # Login Manager
   # services.displayManager.sddm.enable = true; #This line enables sddm
   # services.displayManager.sddm.theme = "where_is_my_sddm_theme";
   # services.xserver.enable = true; # Might need this for Xwayland  
+
   # Enable the Flakes feature and the accompanying new nix command-line tool
   boot.loader.grub.device = "/dev/sda";   # (for BIOS systems only)
   boot.loader.systemd-boot.enable = true; # (for UEFI systems only)
@@ -49,11 +51,6 @@
     WLR_NO_HARDWARE_CURSORS = "1";
     WLR_RENDERER_ALLOW_SOFTWARE= "1";
     LIBGL_ALWAYS_SOFTWARE = "1";
-  };
-  environment.variables = {
-    WLR_NO_HARDWARE_CURSORS = "1";
-    WLR_RENDERER_ALLOW_SOFTWARE= "1";
-    # LIBGL_ALWAYS_SOFTWARE = "1";
   };
   # programs.hyprland.xwayland.enable = true;
 
