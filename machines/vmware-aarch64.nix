@@ -28,6 +28,7 @@
     kitty
     where-is-my-sddm-theme
     konsole
+    mesa
   ];
 
   users.users.matt = {
