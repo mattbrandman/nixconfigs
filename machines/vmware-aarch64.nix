@@ -31,7 +31,6 @@
     where-is-my-sddm-theme
   ];
 
-  gtk.enable = true;
   qt.enable = true;
 
   users.users.alice = {
