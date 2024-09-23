@@ -27,8 +27,6 @@
     alacritty
     kitty
     where-is-my-sddm-theme
-    weston
-    mesa
   ];
 
   qt.enable = true;
