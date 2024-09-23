@@ -5,6 +5,7 @@
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
   ];
+  hardware.graphics.enable = true;
   services.displayManager.sddm.enable = true; #This line enables sddm
   # services.displayManager.sddm.wayland.enable = true;
   services.displayManager.sddm.theme = "where_is_my_sddm_theme";
@@ -56,8 +57,6 @@
     # LIBGL_ALWAYS_SOFTWARE = "1";
   };
   # programs.hyprland.xwayland.enable = true;
-  services.xserver.videoDrivers = [ "vmware" ];
-
 
   # ......
 }
