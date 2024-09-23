@@ -29,7 +29,6 @@
     tmux
     alacritty
     kitty
-    
     konsole
 
   ];
@@ -56,6 +55,6 @@
   xdg.portal.enable = true;
   qt.enable = true;
   # programs.hyprland.xwayland.enable = true;
-  services.dunst.enable = true;
+  # services.dunst.enable = true;
   # ......
 }
