@@ -23,6 +23,7 @@
     # dunst
     mesa
     where-is-my-sddm-theme
+    xdg-desktop-portal-gtk
     vim
     wget
     curl
