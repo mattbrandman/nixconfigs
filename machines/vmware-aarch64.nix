@@ -20,15 +20,18 @@
     # Flakes clones its dependencies through the git command,
     # so git must be installed first
     git
+    dunst
+    mesa
+    where-is-my-sddm-theme
     vim
     wget
     curl
     tmux
     alacritty
     kitty
-    where-is-my-sddm-theme
+    
     konsole
-    mesa
+
   ];
 
   users.users.matt = {
