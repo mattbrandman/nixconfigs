@@ -28,14 +28,7 @@
     kitty
     where-is-my-sddm-theme
     konsole
-    glxinfo
   ];
-
-  xdg.portal = {
-    enable = true;
-    extraPortals = [ programs.hyprland.portalPackage ];
-  };
-
 
   users.users.matt = {
     isNormalUser  = true;
