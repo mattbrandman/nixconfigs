@@ -20,7 +20,7 @@
     # Flakes clones its dependencies through the git command,
     # so git must be installed first
     git
-    dunst
+    # dunst
     mesa
     where-is-my-sddm-theme
     vim
@@ -55,6 +55,6 @@
   xdg.portal.enable = true;
   qt.enable = true;
   # programs.hyprland.xwayland.enable = true;
-  services.dunst.enable = true;
+  # services.dunst.enable = true;
   # ......
 }
