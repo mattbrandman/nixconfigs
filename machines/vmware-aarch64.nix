@@ -31,6 +31,12 @@
     glxinfo
   ];
 
+  xdg.portal = {
+    enable = true;
+    extraPortals = [ programs.hyprland.portalPackage ];
+  };
+
+
   users.users.matt = {
     isNormalUser  = true;
     home  = "/home/matt";
