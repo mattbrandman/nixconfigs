@@ -28,9 +28,8 @@
     kitty
     where-is-my-sddm-theme
     konsole
+    glxinfo
   ];
-
-  qt.enable = true;
 
   users.users.matt = {
     isNormalUser  = true;
