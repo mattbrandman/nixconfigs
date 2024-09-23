@@ -6,7 +6,6 @@
     ./hardware-configuration.nix
   ];
   hardware.graphics.enable = true;
-  hardware.opengl.enable = true;
   # Login Manager
   services.displayManager.sddm.enable = true; #This line enables sddm
   # services.displayManager.sddm.theme = "where_is_my_sddm_theme";
@@ -30,7 +29,6 @@
     where-is-my-sddm-theme
     konsole
   ];
-  services.xserver.videoDrivers = [ "vmware" ];
 
   qt.enable = true;
 
