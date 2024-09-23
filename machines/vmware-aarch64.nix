@@ -7,7 +7,7 @@
   ];
   services.displayManager.sddm.enable = true; #This line enables sddm
   services.displayManager.sddm.wayland.enable = true;
-  services.xserver.displayManager.sddm.theme = "where_is_my_sddm_theme";
+  services.displayManager.sddm.theme = "where_is_my_sddm_theme";
 
   # services.xserver.displayManager.sddm.enable = true; #This line enables sddm
   services.xserver.enable = true; # Might need this for Xwayland  
@@ -23,8 +23,6 @@
     vim
     wget
     curl
-    qt5.qtwayland
-    qt6.qtwayland
     tmux
     alacritty
     kitty
