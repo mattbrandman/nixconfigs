@@ -6,10 +6,9 @@
     ./hardware-configuration.nix
   ];
   hardware.graphics.enable = true;
-  services.displayManager.sddm.enable = true; #This line enables sddm
-  # services.displayManager.sddm.wayland.enable = true;
-  services.displayManager.sddm.theme = "where_is_my_sddm_theme";
-  services.xserver.enable = true; # Might need this for Xwayland  
+  # services.displayManager.sddm.enable = true; #This line enables sddm
+  # services.displayManager.sddm.theme = "where_is_my_sddm_theme";
+  # services.xserver.enable = true; # Might need this for Xwayland  
   # Enable the Flakes feature and the accompanying new nix command-line tool
   boot.loader.grub.device = "/dev/sda";   # (for BIOS systems only)
   boot.loader.systemd-boot.enable = true; # (for UEFI systems only)
