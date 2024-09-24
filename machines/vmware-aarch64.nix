@@ -35,8 +35,8 @@
     libnotify
     libsForQt5.qt5ct
     adwaita-qt
-    firefox
   ];
+  programs.firefox.enable = true;
   environment.sessionVariables = {
     QT_STYLE_OVERRIDE = "adwaita-dark";
   };
