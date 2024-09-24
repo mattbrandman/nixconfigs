@@ -33,8 +33,8 @@
     konsole
     mako
     libnotify
-    libsForQt5.qt5ct
-    adwaita-qt
+    # libsForQ-t5.qt5ct
+    # adwaitaqt
   ];
   programs.firefox.enable = true;
   environment.sessionVariables = {
