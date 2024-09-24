@@ -32,6 +32,7 @@
     kitty
     konsole
     mako
+    libnotify
   ];
 
   users.users.matt = {
