@@ -34,7 +34,6 @@
     mako
     libnotify
     libsForQt5.qt5ct
-    libsForQt6.qt6ct
   ];
 
   users.users.matt = {
