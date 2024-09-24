@@ -31,7 +31,7 @@
     alacritty
     kitty
     konsole
-    mako
+    swaynotificationcenter
   ];
 
   users.users.matt = {
