@@ -16,8 +16,6 @@
   boot.loader.systemd-boot.enable = true; # (for UEFI systems only)
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   programs.hyprland.enable = true;
-  environment.variables.QT_QPA_PLATFORMTHEME = "qt5ct";
-
   environment.systemPackages = with pkgs; [
     # Flakes clones its dependencies through the git command,
     # so git must be installed first
@@ -36,14 +34,10 @@
     mako
     libnotify
     libsForQt5.qt5ct
+    adwaita-qt
   ];
-  nixpkgs.config.qt5 = {
-    enable = true;
-    platformTheme = "qt5ct"; 
-      style = {
-        package = pkgs.utterly-nord-plasma;
-        name = "Utterly Nord Plasma";
-      };
+  environment.sessionVariables = {
+    QT_STYLE_OVERRIDE = "adwaita-dark";
   };
 
   users.users.matt = {
