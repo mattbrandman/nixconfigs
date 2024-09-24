@@ -16,6 +16,8 @@
   boot.loader.systemd-boot.enable = true; # (for UEFI systems only)
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   programs.hyprland.enable = true;
+  environment.variables.QT_QPA_PLATFORMTHEME = "qt5ct";
+
   environment.systemPackages = with pkgs; [
     # Flakes clones its dependencies through the git command,
     # so git must be installed first
