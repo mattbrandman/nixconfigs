@@ -35,6 +35,14 @@
     libnotify
     libsForQt5.qt5ct
   ];
+  pkgs.config.qt5 = {
+    enable = true;
+    platformTheme = "qt5ct"; 
+      style = {
+        package = pkgs.utterly-nord-plasma;
+        name = "Utterly Nord Plasma";
+      };
+  };
 
   users.users.matt = {
     isNormalUser  = true;
