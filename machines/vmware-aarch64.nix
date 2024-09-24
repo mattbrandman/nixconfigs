@@ -35,7 +35,7 @@
     libnotify
     libsForQt5.qt5ct
   ];
-  pkgs.config.qt5 = {
+  nixpkgs.config.qt5 = {
     enable = true;
     platformTheme = "qt5ct"; 
       style = {
