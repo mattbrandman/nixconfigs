@@ -56,7 +56,7 @@
   };
   # xdg.portal.enable = true;
   # qt.enable = true;
-  # programs.hyprland.xwayland.enable = true;
+  programs.hyprland.xwayland.enable = false;
   # services.mako.enable = true;
   # ......
 }
