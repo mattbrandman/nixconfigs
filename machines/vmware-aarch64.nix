@@ -5,19 +5,17 @@
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
   ];
-  # hardware.graphics.enable = true;
+  hardware.graphics.enable = true;
   # Login Manager
   # services.displayManager.sddm.enable = true; #This line enables sddm
   # services.displayManager.sddm.theme = "where_is_my_sddm_theme";
   # services.xserver.enable = true; # Might need this for Xwayland  
-  services.xserver.enable = true;
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
+
   # Enable the Flakes feature and the accompanying new nix command-line tool
   boot.loader.grub.device = "/dev/sda";   # (for BIOS systems only)
   boot.loader.systemd-boot.enable = true; # (for UEFI systems only)
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
-  # programs.hyprland.enable = true;
+  programs.hyprland.enable = true;
   environment.systemPackages = with pkgs; [
     # Flakes clones its dependencies through the git command,
     # so git must be installed first
@@ -25,16 +23,15 @@
     # dunst
     mesa
     where-is-my-sddm-theme
-    # xdg-desktop-portal-gtk
+    xdg-desktop-portal-gtk
     vim
     wget
     curl
     tmux
     alacritty
     kitty
-    # konsole
-    # libnotify
-    # swaynotificationcenter
+    konsole
+    mako
   ];
 
   users.users.matt = {
@@ -58,7 +55,7 @@
   };
   # xdg.portal.enable = true;
   # qt.enable = true;
-  # programs.hyprland.xwayland.enable = false;
+  # programs.hyprland.xwayland.enable = true;
   # services.mako.enable = true;
   # ......
 }
