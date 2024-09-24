@@ -31,6 +31,7 @@
     alacritty
     kitty
     konsole
+    libnotify
     swaynotificationcenter
   ];
 
