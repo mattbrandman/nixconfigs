@@ -12,6 +12,7 @@
   # services.xserver.enable = true; # Might need this for Xwayland  
 
   # Enable the Flakes feature and the accompanying new nix command-line tool
+  pkgs.config.allowUnfree = true;
   boot.loader.grub.device = "/dev/sda";   # (for BIOS systems only)
   boot.loader.systemd-boot.enable = true; # (for UEFI systems only)
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
