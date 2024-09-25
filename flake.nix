@@ -16,7 +16,7 @@
     # };
   };
 
-  outputs = { self, nixpkgs, nixCats, home-manager, ... }@inputs:
+  outputs = { self, nixpkgs, nixCats, home-manager, stylix, ... }@inputs:
     let
       system = "aarch64-linux";
       pkgs = import nixpkgs { inherit system; };
