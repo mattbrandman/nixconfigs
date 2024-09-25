@@ -25,6 +25,7 @@
     where-is-my-sddm-theme
     xdg-desktop-portal-gtk
     vim
+    vscode
     wget
     curl
     tmux
