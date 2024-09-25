@@ -19,7 +19,7 @@
   outputs = { self, nixpkgs, nixCats, home-manager, stylix, ... }@inputs:
     let
       system = "aarch64-linux";
-      pkgs = import nixpkgs { inherit system; config.allowUnfree = true; };
+      pkgs = import nixpkgs { inherit system; config.allowUnfree = true; config.allowUnfreePredicate = _: = true; };
       # Import your nixcat-config.nix file
       nc = import ./nixcats-config.nix {inherit inputs;};
     in
