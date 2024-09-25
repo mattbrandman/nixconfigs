@@ -49,7 +49,7 @@
   # Set the default editor to vim
   nixCats.enable = true;
   environment.variables.EDITOR = "nvim";
-  programs.dconf.enable = true;
+  # programs.dconf.enable = true;
   # Virtualisation Settings
   virtualisation.vmware.guest.enable = true;
   
