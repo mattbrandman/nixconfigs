@@ -65,5 +65,5 @@
   };
   stylix.cursor.package = pkgs.bibata-cursors;
   stylix.cursor.name = "Bibata-Modern-Ice";
-  stylx.cursor.size = 24;
+  stylix.cursor.size = 24;
 }
