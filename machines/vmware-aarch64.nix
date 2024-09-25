@@ -9,7 +9,7 @@
   # Login Manager
   # services.displayManager.sddm.enable = true; #This line enables sddm
   # services.displayManager.sddm.theme = "where_is_my_sddm_theme";
-  # services.xserver.enable = true; # Might need this for Xwayland  
+  services.xserver.enable = true; # Might need this for Xwayland  
 
   # Enable the Flakes feature and the accompanying new nix command-line tool
   boot.loader.grub.device = "/dev/sda";   # (for BIOS systems only)
@@ -69,5 +69,5 @@
   stylix.cursor.package = pkgs.bibata-cursors;
   stylix.cursor.name = "Bibata-Modern-Ice";
   stylix.cursor.size = 24;
-  programs.hyprland.xwayland.enable = true;
+  # programs.hyprland.xwayland.enable = true;
 }
