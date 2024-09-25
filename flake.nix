@@ -19,7 +19,7 @@
   outputs = { self, nixpkgs, nixCats, home-manager, stylix, ... }@inputs:
     let
       system = "aarch64-linux";
-      pkgs = import nixpkgs { inherit system; config.allowUnfree = true; config.allowUnfreePredicate = _: = true; };
+
       # Import your nixcat-config.nix file
       nc = import ./nixcats-config.nix {inherit inputs;};
     in
@@ -29,6 +29,13 @@
       # Create packages from packageDefinitions
       # Define development shells
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+        pkgs = import nixpkgs {
+          system = "aarch64-linux"; # whatever your system name is
+          config = {
+            allowUnfree = true;
+            allowUnfreePredicate = _: true;
+          };
+        };
         system = "aarch64-linux";
         specialArgs = { inherit inputs; };
         modules = [
