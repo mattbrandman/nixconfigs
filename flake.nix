@@ -30,7 +30,6 @@
       # Define development shells
       nixpkgs.config.allowUnfree = true;
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-        nixpkgs.config.allowUnfree = true;
         system = "aarch64-linux";
         specialArgs = { inherit inputs; };
         modules = [
