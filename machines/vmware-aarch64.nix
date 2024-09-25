@@ -55,6 +55,7 @@
   programs.dconf.enable = true;
   # Virtualisation Settings
   virtualisation.vmware.guest.enable = true;
+  stylix.enable = true;
   environment.sessionVariables = {
     WLR_NO_HARDWARE_CURSORS = "1";
     WLR_RENDERER_ALLOW_SOFTWARE= "1";

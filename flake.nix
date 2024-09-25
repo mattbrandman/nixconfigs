@@ -7,6 +7,7 @@
     nixCats.url = "github:BirdeeHub/nixCats-nvim?dir=nix";
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    stylix.url = "github:danth/stylix";
     # hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
     # Include any additional inputs if needed
     # For example:
@@ -31,6 +32,7 @@
         system = "aarch64-linux";
         specialArgs = { inherit inputs; };
         modules = [
+          stylix.nixosModules.stylix
           ./machines/vmware-aarch64.nix
           nc.nixosModules.default
           home-manager.nixosModules.home-manager
