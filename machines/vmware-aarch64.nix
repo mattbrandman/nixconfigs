@@ -39,7 +39,7 @@
   ];
   
   programs.firefox.enable = true;
-  programs.firefox.package = pkgs.firefox-bin;
+  programs.firefox.package = pkgs.firefox-beta;
 
   users.users.matt = {
     isNormalUser  = true;
