@@ -60,5 +60,5 @@
   };
   stylix.enable = true;
   stylix.cursor.package = pkgs.bibata-cursors;
-  stylix.cursor.theme = "Bibata-Modern-Ice";
+  stylix.cursor.name = "Bibata-Modern-Ice";
 }
