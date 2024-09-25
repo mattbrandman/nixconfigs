@@ -34,7 +34,7 @@
     konsole
     mako
     libnotify
-    ungoogle-chromium
+    ungoogled-chromium
     # libsForQ-t5.qt5ct
     # adwaitaqt
   ];
