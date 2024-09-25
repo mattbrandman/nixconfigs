@@ -38,6 +38,6 @@
     defaultCacheTtl = 1800;
     enableSshSupport = true;
   };
-  stylix.cursor.package = "pkgs.bibata-cursors";
+  stylix.cursor.package = pkgs.bibata-cursors;
   stylix.cursor.theme = "Bibata-Modern-Ice";
 }
