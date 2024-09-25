@@ -58,4 +58,7 @@
     WLR_RENDERER_ALLOW_SOFTWARE= "1";
     LIBGL_ALWAYS_SOFTWARE = "1";
   };
+  stylix.enable = true;
+  stylix.cursor.package = pkgs.bibata-cursors;
+  stylix.cursor.theme = "Bibata-Modern-Ice";
 }
