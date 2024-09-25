@@ -18,7 +18,7 @@
 
   outputs = { self, nixpkgs, nixCats, home-manager, stylix, ... }@inputs:
     let
-      system = "aarch64-darwin";
+      system = "aarch64-linux";
 
       # Import your nixcat-config.nix file
       nc = import ./nixcats-config.nix {inherit inputs;};
@@ -31,13 +31,13 @@
       
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
         pkgs = import nixpkgs {
-          system = "aarch64-darwin"; # whatever your system name is
+          system = "aarch64-linux"; # whatever your system name is
           config = {
             allowUnfree = true;
             allowUnfreePredicate = _: true;
           };
         };
-        system = "aarch64-darwin";
+        system = "aarch64-linux";
         specialArgs = { inherit inputs; };
         modules = [
           stylix.nixosModules.stylix
