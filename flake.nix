@@ -32,7 +32,7 @@
         system = "aarch64-linux";
         specialArgs = { inherit inputs; };
         modules = [
-          stylix.nixosModules.stylix
+          stylix.homeManagerModules.stylix
           ./machines/vmware-aarch64.nix
           nc.nixosModules.default
           home-manager.nixosModules.home-manager
