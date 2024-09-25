@@ -39,7 +39,7 @@
   ];
   
   programs.firefox.enable = true;
-  programs.firefox.package = pkgs.firefox-wayland;
+  programs.firefox.package = pkgs.firefox-bin;
 
   users.users.matt = {
     isNormalUser  = true;
