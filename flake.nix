@@ -37,7 +37,7 @@
             allowUnfreePredicate = _: true;
           };
         };
-        system = "aarch64-linux";
+        system = "aarch64-darwin";
         specialArgs = { inherit inputs; };
         modules = [
           stylix.nixosModules.stylix
