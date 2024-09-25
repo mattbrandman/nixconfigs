@@ -28,6 +28,7 @@
 
       # Create packages from packageDefinitions
       # Define development shells
+      nixpkgs.config.allowUnfree = true;
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
         system = "aarch64-linux";
         specialArgs = { inherit inputs; };
