@@ -7,7 +7,7 @@
   ];
   pkgs.config = {
     allowUnfree = true;
-  }
+  };
   hardware.graphics.enable = true;
   # Login Manager
   # services.displayManager.sddm.enable = true; #This line enables sddm
