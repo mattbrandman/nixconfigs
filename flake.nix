@@ -5,6 +5,8 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     nixCats.url = "github:BirdeeHub/nixCats-nvim?dir=nix";
+    home-manager.url = "github:nix-community/home-manager";
+    home-manager.inputs.nixpkgs.follows = "nixpkgs";
     # hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
     # Include any additional inputs if needed
     # For example:
@@ -31,6 +33,15 @@
         modules = [
           ./machines/vmware-aarch64.nix
           nc.nixosModules.default
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.jdoe = import ./home.nix;
+
+            # Optionally, use home-manager.extraSpecialArgs to pass
+            # arguments to home.nix
+          }
         ];
       };
       nixosConfigurations.vm-aarch64 = nixpkgs.lib.nixosSystem {
