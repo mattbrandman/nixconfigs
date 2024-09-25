@@ -56,6 +56,8 @@
   # Virtualisation Settings
   virtualisation.vmware.guest.enable = true;
   stylix.enable = true;
+  stylix.cursor.package = pkgs.bibata-cursors;
+  stylix.cursor.theme = "Bibata-Modern-Ice";
   environment.sessionVariables = {
     WLR_NO_HARDWARE_CURSORS = "1";
     WLR_RENDERER_ALLOW_SOFTWARE= "1";
